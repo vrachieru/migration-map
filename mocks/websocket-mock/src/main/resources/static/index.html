@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Tweet Mock</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">WebSocket connection:</label><br/>
+                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tweet</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td>
+                            Username
+                        </td>
+                        <td>
+                            <input type="text" id="username" class="form-control" value="vrachieru_">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Full name
+                        </td>
+                        <td>
+                            <input type="text" id="name" class="form-control" value="Victor Rachieru">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Timestamp
+                        </td>
+                        <td>
+                            <input type="text" id="timestamp" class="form-control" value="1486853732988">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Message
+                        </td>
+                        <td>
+                            <input type="text" id="tweet" class="form-control" value="So long Iasi, Romania behind. London, Great Britain is what I'll call home.">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Source</b>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country code
+                        </td>
+                        <td>
+                            <input type="text" id="s_country_code" class="form-control" value="ro">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country name
+                        </td>
+                        <td>
+                            <input type="text" id="s_country" class="form-control" value="Romania">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Latitude
+                        </td>
+                        <td>
+                            <input type="text" id="s_latitude" class="form-control" value="47.1561373">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Longitude
+                        </td>
+                        <td>
+                            <input type="text" id="s_longitude" class="form-control" value="27.5869704">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Destination</b>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country code
+                        </td>
+                        <td>
+                            <input type="text" id="d_country_code" class="form-control" value="gb">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country name
+                        </td>
+                        <td>
+                            <input type="text" id="d_country" class="form-control" value="Great Britain">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Latitude
+                        </td>
+                        <td>
+                            <input type="text" id="d_latitude" class="form-control" value="51.5285578">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Longitude
+                        </td>
+                        <td>
+                            <input type="text" id="d_longitude" class="form-control" value="-0.2420216">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="send" class="btn btn-default" type="submit">Send</button>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>
