@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Twitter Migration Project</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <link rel="stylesheet" href="node_modules/prismjs/themes/prism-coy.css">
+    <script src="node_modules/prismjs/prism.js" defer></script>
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+      <p class="title">Migration Map</p>
+      <p class="subtitle">A visual representation of migration patterns</p>
+    </header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          Considering tweets provided by Twitter users, the application proposed will be able to generate in real-time an interactive map representing the current intention
+          of humans to move from one place to another. In that way we can visualize if there is a massive migration flow.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/historical-flatmap-particles.png" width="950">
+        </figure>
+      </section>
+
+
+      <section typeof="sa:MainMenu" id="mainmenu">
+        <h2>Main menu</h2>
+
+        <figure typeof="sa:Image">
+          <img src="images/main-menu.png" width="950">
+        </figure>
+
+        <p>
+          The application consists of four main sections:
+          <ul>
+            <li>Live - view migration chatter in real time.</li>
+            <li>Historical - view migration trends over a period of time with added controls to better grasp the information.</li>
+            <li>Statistics - correlated information about migration chatter over a period of time.</li>
+            <li>Tour - user guide presenting how to get around to using the application.</li>
+        </p>
+      </section>
+
+
+      <section typeof="sa:LeftPane" id="leftpane">
+        <h2>Left Pane</h2>
+
+        <p>
+          The left pane is home to this application's key visual aspect, the map.
+        </p>
+        <p>
+          Here you can visualize migration path either in real time or from historical data.<br/>
+          Information can be represented to best suit your needs by customizing the way the map or underlying details are shown.
+        </p>
+        <p>
+          To list just a couple of things you can tweak to your own liking:
+          <ul>
+            <li>map projection type</li>
+            <li>migration projection type</li>
+            <li>playback speed</li>
+            <li>etc</li>
+            </ul>
+        </p>
+        <p>
+          On the right side there's a little details panel that shows the total currently registered/displayed
+          migration intentions as well as the top countries affected by this phenomenon.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/left-pane.png" width="465">
+        </figure>
+      </section>
+
+
+      <section typeof="sa:OptionsPanel" id="optionspanel">
+        <h2>Options panel</h2>
+
+        <p>
+          As stated above, the options panel offers you the means to customize your experience.<br/>
+          This feature is dynamically linked to each section and will display options relevant to a particular section.
+        </p>
+        <p>
+          For example, in the live view you don't need the ability to change the speed at which you see the information because it's real time.<br/>
+          Actually if I think about it that would be cool, you'd be some kind of time lord and could take over the world and crush it's soul under your heel.. But enough babling, let's get on with the guide.
+        </p>
+
+        <p>
+          <ul>
+            <li>
+              Representation
+              <ul>
+                <li>Arc - animated line progressing from the migration source to it's destination</li>
+                <li>Circle - dual ripple effect, red for the source and green for the destination</li>
+                <li>Particle - particle zooming from source to destination</li>
+              </ul>
+            </li>
+            <li>
+              Projection
+              <ul>
+                <li>Flat - flat map representation of Earth</li>
+                <li>Globe - spinning sphere (globe) representation of Earth</li>
+              </ul>
+            </li>
+            <li>
+              Autorotation
+              <ul>
+                <li>available only for the globe projection</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/live-options-panel.png" width="465">
+          <figcaption style="text-align: center" >
+            Live view options panel
+          </figcaption>
+        </figure>
+
+        <p>
+          In adition to the live view, you can see that in the historical view we have two more controls.
+        </p>
+        <p>
+          The date displayed is the current moment in time for which the data is displayed.<br/>
+          This is represented in UTC in order to not make any confusions between timezones.
+        </p>
+        <p>
+          The other new feature is that of being able to control the current point in time for the data being displayed via the slider.<br/>
+          The speed with which time passes in your current representation can be controlled as well.<br/>
+          This is visualised by the playback multiplyer (in the picture below '16x') which is controlled by the fast forwatd and backward buttons on the right.<br/>
+          You can also pause and resume playback with the coresponding button.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/historical-options-panel.png" width="465">
+          <figcaption style="text-align: center" >
+            Historical view options panel
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section typeof="sa:DetailsPanel" id="detailspanel">
+        <h2>Details panel</h2>
+
+        <p>
+          The details panel can be found in the lower right corner of the live and historical views.<br/>
+          Its purpouse is to act as a heads up display (HUD) to the user displaying minimal but significant statisical information.
+        </p>
+        <p>
+          The total migration displays the number of migration intentions processed by the application at the current point in time.
+        </p>
+        <p>
+          The second item displays the top cpuntries affected by the migration process.<br/>
+          This includes both source and destination countries, information which can be toggled with the use of the button in the right hand side of the item's header.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/details-panel.png" width="465">
+          <figcaption style="text-align: center" >
+            Details panel
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <section typeof="sa:RightPane" id="rightpane">
+        <h2>Right pane</h2>
+
+        <p>
+          The right pane is home to the core information that lays at this application's foundation, the tweets.<br/>
+          Each tweet that is represented on the map has its correspondent within the tweet pane.
+        </p>
+        <p>
+          The display menner is similar to their original form.<br/>
+          A generic avatar to represent the person, their full name and Twitter handle as well as the month and day when the message originated.
+        </p>
+        <p>
+          In adition to this, under the avatar lie the flags of the origin and destination countries for the migration.<br/>
+          This provides all the needed information at a glance.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/right-pane.png" width="465">
+          <figcaption style="text-align: center" >
+            Right pane (tweets)
+          </figcaption>
+        </figure>
+      </section>
+
+      <section typeof="sa:LiveView" id="live">
+        <h2>Live view</h2>
+
+        <p>
+          As previously described, the live view shows information in real time.<br/>
+          That is why there is not much room for data manipulation.
+        </p>
+        <p>
+          You can see in the image below that the information stream is much lower than that of the historical view where everything is put into high gear.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/live-globe-particles.png" width="950">
+          <figcaption style="text-align: center" >
+              Live view: globe with particles
+          </figcaption>
+        </figure>
+      </section>
+
+      <section typeof="sa:LiveView" id="live">
+        <h2>Historical view</h2>
+
+        <p>
+          The historical view offers the advantage of being able to better manipulate the data visualisation of data.<br/>
+          By customizing the playback options you can get a better idea of what the migration patterns are as opposed to a low throughput stream of live data.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/historical-flatmap-particles.png" width="950">
+          <figcaption style="text-align: center" >
+              Historical view: flatmap with particles
+          </figcaption>
+        </figure>
+
+        <figure typeof="sa:Image">
+          <img src="images/historical-flatmap-circles-and-particles.png" width="950">
+          <figcaption style="text-align: center" >
+              Historical view: flatmap with circles and particles
+          </figcaption>
+        </figure>
+
+        <figure typeof="sa:Image">
+          <img src="images/historical-globe-arcs.png" width="950">
+          <figcaption style="text-align: center" >
+              Historical view: globe with arcs
+          </figcaption>
+        </figure>
+      </section>
+
+      <section typeof="sa:Statistics" id="statistics">
+        <h2>Statistics</h2>
+
+        <p>
+          The statistics view offers a tiny bit of extra information in relation to what you can usually see in the historical view<br/>
+          Here you can visualize the global trends color coded for departures, arrivals and the median between the two gropued by country.
+        </p>
+        <p>
+          On the right side pane you can see the complete list of countries from where migrations have originated sorted in descending order.<br/>
+          Viewing this for a specific timeframe you can correlate the massive migrations in the top countries with events happening there.
+          This could give you a different perspective over your surroundings.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/statistics.png" width="950">
+          <figcaption style="text-align: center" >
+              Statistics
+          </figcaption>
+        </figure>
+      </section>
+
+      <section typeof="sa:Tour" id="tour">
+        <h2>Tour</h2>
+
+        <p>
+          The application tour takes your hand and embarks you into an adventure to explore the application<br/>
+          With each click you are greeted by a witty toolltip filled with information.<br/>
+          Let it guide you throughout the application and master it.
+        </p>
+
+        <figure typeof="sa:Image">
+          <img src="images/tour.png" width="950">
+          <figcaption style="text-align: center" >
+              Tour
+          </figcaption>
+        </figure>
+      </section>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>
